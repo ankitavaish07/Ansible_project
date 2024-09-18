@@ -1,0 +1,9 @@
+- name: Configure CA Certificates and Deploy Application
+  hosts: ec2_instances
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - ca_certificates
+    - app_deployment
+
